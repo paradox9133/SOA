@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:composition template="/templates/MyTemplates.xhtml">
+			<ui:define name="content">
+				<h:form>
+					<h:commandButton value="Show" action="#{navigationController.showPage(1)}" />
+					<h:commandButton value="Add" action="#{navigationController.showPage(2)}" />
+					<h:commandButton value="Delete" action="#{navigationController.showPage(3)}" />
+					<h:commandButton value="Edit" action="#{navigationController.showPage(4)}" />
+					<h:commandButton value="Download" action="#{show.downloadLibraryXML}" />
+				</h:form>
+				<h:outputLabel value="Zrobione jedynie czytanie z XML - zabrakło czasu"></h:outputLabel>
+			</ui:define>
+	</ui:composition>
+
+</html>

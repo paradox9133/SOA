@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/MyTemplates.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<h:commandButton action="#{navigationController.moveToIndex()}"
+				value="Back" />
+			<h:dataTable value="#{show.wieza}" var="w" styleClass="authorTable"
+				headerClass="authorTableHeader"
+				rowClasses="authorTableOddRow,authorTableEvenRow">
+				<h:column>
+					<f:facet name="header">Wysokość</f:facet>
+				#{w.wysokosc}
+				</h:column>
+				<h:column>
+					<h:dataTable value="#{w.mag}" var="m">
+						<h:column>
+							<f:facet name="header">Imię</f:facet>
+							#{m.imie}
+						</h:column>
+						<h:column>
+							<f:facet name="header">Moc</f:facet>
+							#{m.moc}
+						</h:column>
+						<h:column>
+							<f:facet name="header">Krąg</f:facet>
+							#{m.krag}
+						</h:column>
+					</h:dataTable>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Katalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="KatalogSchema.xsd">
+  <wieza wysokosc="20">
+    <mag imie="Jan" krag="powierze" moc="2000"/>
+    <mag imie="Benek" krag="powierze" moc="100"/>
+  </wieza>
+  <wieza wysokosc="24">
+  	<mag imie="Tomek" krag="ogien" moc="500"/>
+  	<mag imie="Kuba" krag="powierze" moc="500"/>
+  	<mag imie="Adam" krag="ziemia" moc="5000"/>
+  </wieza>
+</Katalog>
